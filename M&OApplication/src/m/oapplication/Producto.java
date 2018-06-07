@@ -11,6 +11,7 @@ package m.oapplication;
  */
 public class Producto {
     String nombre;
+    String descripcion;
     String area;
     String estado;
     String cantidad;
@@ -18,8 +19,9 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String nombre, String area, String estado, String cantidad) {
+    public Producto(String nombre, String descripcion, String area, String estado, String cantidad) {
         this.nombre = nombre;
+        this.descripcion = descripcion;
         this.area = area;
         this.estado = estado;
         this.cantidad = cantidad;
@@ -31,6 +33,14 @@ public class Producto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getArea() {
