@@ -5,6 +5,8 @@
  */
 package m.oapplication;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ambarsuarez
@@ -48,6 +50,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         jb_entrar.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jb_entrar.setText("Listo");
+        jb_entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_entrarMouseClicked(evt);
+            }
+        });
 
         jp_password.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
 
@@ -93,6 +100,14 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jb_entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_entrarMouseClicked
+        if (jtf_usuario.equals(admin.username) && jp_password.equals(admin.contraseña)) {
+            
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Usuario o COntraseña incorrecta");
+        }
+    }//GEN-LAST:event_jb_entrarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -136,4 +151,5 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPasswordField jp_password;
     private javax.swing.JTextField jtf_usuario;
     // End of variables declaration//GEN-END:variables
+    Usuario admin = new Usuario("Roberto Mejia", "mejia01");
 }
