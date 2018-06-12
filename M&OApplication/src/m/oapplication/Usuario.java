@@ -12,13 +12,15 @@ package m.oapplication;
 public class Usuario {
     String username;
     String contraseña;
+    String nombre;
 
     public Usuario() {
     }
 
-    public Usuario(String username, String contraseña) {
+    public Usuario(String username, String contraseña, String nombre) {
         this.username = username;
         this.contraseña = contraseña;
+        this.nombre = nombre;
     }
 
     public String getUsername() {
@@ -36,6 +38,15 @@ public class Usuario {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
 
     @Override
     public String toString() {

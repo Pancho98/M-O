@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package m.oapplication;
-
-import javax.swing.JOptionPane;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -132,7 +130,9 @@ public class MainWindow extends javax.swing.JFrame {
             if (!username.equals(admin.username)&&!password.equals(admin.contraseña)){
                 jl_errorpass.setVisible(true);
             }else{
-                this.setVisible(false);
+                jl_errorpass.setVisible(false);
+                this.setVisible(false);             
+                new Options().ReceiveUser(admin);            
             }
     }//GEN-LAST:event_jb_entrarMouseClicked
 
@@ -181,5 +181,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPasswordField jp_password;
     private javax.swing.JTextField jtf_usuario;
     // End of variables declaration//GEN-END:variables
-    Usuario admin = new Usuario("Roberto Mejia", "mejia01");
+    Usuario admin = new Usuario("Roberto Mejia", "mejia01","Roberto Mejia");
+    
+    //function for signout
+    public void Signout(){
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(screenSize.width, screenSize.height);
+        this.setVisible(true);
+    }
 }

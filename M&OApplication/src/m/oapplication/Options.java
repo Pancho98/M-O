@@ -5,6 +5,9 @@
  */
 package m.oapplication;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author ambarsuarez
@@ -15,6 +18,8 @@ public class Options extends javax.swing.JFrame {
      * Creates new form Options
      */
     public Options() {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(screenSize.width, screenSize.height);
         initComponents();
     }
 
@@ -27,21 +32,126 @@ public class Options extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jl_signedUser = new javax.swing.JLabel();
+        jb_inventario = new javax.swing.JButton();
+        jb_entrada = new javax.swing.JButton();
+        jb_salida = new javax.swing.JButton();
+        jb_facturacion = new javax.swing.JButton();
+        jb_usuarios = new javax.swing.JButton();
+        jb_salir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MYOCorp.PNG"))); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(93, 92, 97));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Bienvenido");
+
+        jl_signedUser.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jl_signedUser.setForeground(new java.awt.Color(255, 255, 255));
+        jl_signedUser.setText(" ");
+
+        jb_inventario.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jb_inventario.setText("Inventario");
+
+        jb_entrada.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jb_entrada.setText("Entrada");
+
+        jb_salida.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jb_salida.setText("Salida");
+
+        jb_facturacion.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jb_facturacion.setText("Facturación");
+
+        jb_usuarios.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
+        jb_usuarios.setText("Usuarios");
+
+        jb_salir.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jb_salir.setText("Salir");
+        jb_salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_salirMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(199, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jl_signedUser, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jb_salir)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jb_usuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jb_salida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jb_entrada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jb_inventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jb_facturacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(223, 223, 223))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jl_signedUser))
+                .addGap(64, 64, 64)
+                .addComponent(jb_inventario)
+                .addGap(18, 18, 18)
+                .addComponent(jb_entrada)
+                .addGap(18, 18, 18)
+                .addComponent(jb_salida)
+                .addGap(18, 18, 18)
+                .addComponent(jb_usuarios)
+                .addGap(18, 18, 18)
+                .addComponent(jb_facturacion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                .addComponent(jb_salir)
+                .addGap(18, 18, 18))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_salirMouseClicked
+        // TODO add your handling code here:
+        new MainWindow().Signout();
+    }//GEN-LAST:event_jb_salirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +189,26 @@ public class Options extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_entrada;
+    private javax.swing.JButton jb_facturacion;
+    private javax.swing.JButton jb_inventario;
+    private javax.swing.JButton jb_salida;
+    private javax.swing.JButton jb_salir;
+    private javax.swing.JButton jb_usuarios;
+    private javax.swing.JLabel jl_signedUser;
     // End of variables declaration//GEN-END:variables
+    
+    Usuario user = new Usuario();
+    
+    //funcion despues del Login
+    public void ReceiveUser(Usuario usuario){
+    this.user = usuario;
+    this.jl_signedUser.setText(this.user.nombre);
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    this.setSize(screenSize.width, screenSize.height);
+    this.setVisible(true);
+}
 }
